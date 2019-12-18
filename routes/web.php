@@ -12,4 +12,9 @@
 */
 
 
-Route::get('task', 'TaskController@index')->name('task');
+
+Route::get('task', 'TaskController@gettask')->name('task');
+Route::post('task', 'TaskController@posttask')->name('create_task');
+Route::get('task/edit/{id}', 'TaskController@getEdittask')->name('view_edittask');
+Route::put('task/edit/{id}', 'TaskController@postEdittask')->name('update_task');
+Route::delete('task/delete/{id}', 'TaskController@Deletetask')->name('detete_task');
